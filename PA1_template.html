@@ -221,7 +221,7 @@ ACT &lt;- read.csv(temp,header=TRUE,nrows=17568,stringsAsFactors=FALSE)
 ACT$date &lt;- as.Date(ACT$date,format=&quot;%Y-%m-%d&quot;)
 </code></pre>
 
-<h2>Calculating mean total numbers of steps per day</h2>
+<h2>Calculating mean total number of steps per day</h2>
 
 <p>First we look at the total number of steps taken in each day.</p>
 
@@ -252,7 +252,7 @@ plot(as.integer(names(mean_int_steps)),mean_int_steps,type=&quot;l&quot;,xlab=&q
 
 <p>Obtained results suggest that, on average, the maximum number of step is taken within the 835 interval.</p>
 
-<h2>Imputing missing values</h2>
+<h2>Inputing missing values</h2>
 
 <p>The <code>steps</code> column of the dataset contains 2304 missing values, encoded as <code>NA</code>. As missing values can affect the analysis of the data, we fill them in with the average number of steps for the respective five-minute intervals.</p>
 
@@ -289,7 +289,7 @@ hist(tot_steps_mod,main=&quot;Total Number of Steps per Day&quot;,xlab=&quot;num
 
 <p>As can be seen, filling in the missing data increased both the mean and the average total number of steps per day, and brought the distribution of the variable closer to normal by making the two measures of central tendency equal.  </p>
 
-<h2>Determining the differences in activity patterns between weekdays and weekends</h2>
+<h2>Determining differences in activity patterns between weekdays and weekends</h2>
 
 <p>We add a new column to the dataset, indicating whether the measurment was taken on a weekday or weekend.</p>
 
